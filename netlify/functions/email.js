@@ -23,12 +23,12 @@ exports.handler = async function (event, context) {
     };
 
     const mailer = nodemailer.createTransport({
-        host: "smtp.mailjet.net",
-        port: 465,
+        host: "in-v3.mailjet.com",
+        port: 587,
         secure: true,
         auth: {
             user: 'apikey',
-            pass: process.env.mailjetApiKey
+            pass: process.env.MailJetApiKey
         }
     });
 
@@ -42,6 +42,6 @@ exports.handler = async function (event, context) {
         };
     }
     catch (error) {
-        console.log('Error sending email');
+        console.log('Error sending email', error);
     }
 };
