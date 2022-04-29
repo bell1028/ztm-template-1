@@ -107,7 +107,7 @@
         <div class="grid grid-cols-2 px-40 gap-5">
             <div id="left-item-column">
                 <Item
-                image="crispy-chicken.jpg"
+                img :src="'/' + crispy-chicken.jpg" alt="" />
                 title="Crispy Chicken"
                 description="Chicken breast,chilli sauce,tomatoes,pickles,coleslaw"
                 price="11.99"
