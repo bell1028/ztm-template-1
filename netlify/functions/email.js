@@ -27,8 +27,8 @@ exports.handler = async function (event, context) {
         port: 465,
         secure: true,
         auth: {
-            user: 'apiKey',
-            pass: process.env.mailjetApiKey
+            user: process.env.mailjetApiKey,
+            pass: process.env.mailjetSecretKey
         }
     });
 
