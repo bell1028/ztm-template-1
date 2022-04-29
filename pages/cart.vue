@@ -90,11 +90,15 @@ export default {
       this.$store.commit('removeItem', name);
     },
     submitOrder() {
-      this.$axios.post('/.netlify/functions/email', {
-        email: document.getElementById('email').value,
-        orders: this.$order.state.orders,
-      })
-    }
+      this.$axios
+        .post('/.netlify/functions/email', {
+          email: document.getElementById('email').value,
+          orders: this.$order.state.orders,
+        })
+        .then(function (response) {
+          alert('Your order has been submitted');
+        });
+    },
   },
 };
 </script>
