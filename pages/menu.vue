@@ -36,7 +36,7 @@ export default {
     };
   },
   mounted() {
-    this.$axios.get('/items.json').then((response) => {
+    this.$axios.get('items.json').then((response) => {
       this.items = response.data.burgers;
     });
   },
