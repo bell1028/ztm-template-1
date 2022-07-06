@@ -93,7 +93,7 @@ export default {
       this.$axios
         .post('/.netlify/functions/email', {
           email: document.getElementById('email').value,
-          orders: this.$order.state.orders,
+          orders: this.$store.state.orders,
         })
         .then(function (response) {
           alert('Your order has been submitted');
